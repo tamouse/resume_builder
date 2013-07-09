@@ -1,0 +1,5 @@
+= resume_builder
+
+Generate this with
+    resume_builder rdoc
+After you have described your command line interface
