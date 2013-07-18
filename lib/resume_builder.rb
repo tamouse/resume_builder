@@ -1,13 +1,16 @@
-# Time-stamp: <2013-07-09 08:44:49 tamara>
-
 =begin rdoc
 
-*Copyright*:: &copy; (c) 2013 Tamara Temple Web Development
-*Author*::    Tamara Temple <tamouse@gmail.com>
+resume_builder.rb - manage loading libraries
+
+# Time-stamp: <2013-07-18 01:12:20 tamara>
+# Copyright (C) 2013 by Tamara Temple Web Development
+# Author: Tamara Temple <tamouse@gmail.com>
+# License: MIT
 
 =end
 
+require 'active_record'
 
 # Just suck in the whole blame tree why don't you?
-Dir.glob("resume_builder/**/*.rb").each {|f| require f}
+Dir.glob(File.join(File.dirname(__FILE__),"resume_builder","**","*.rb")).each {|f| require f}
 
