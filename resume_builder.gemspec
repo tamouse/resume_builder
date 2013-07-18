@@ -19,8 +19,8 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency('rdoc')
   s.add_development_dependency('aruba')
   s.add_development_dependency('rspec')
+  s.add_development_dependency('factory_girl','~> 4.0')
   s.add_dependency('gli','2.7.0')
   s.add_dependency('activerecord','~> 4.0')
   s.add_dependency('sqlite3')
-
 end
