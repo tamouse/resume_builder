@@ -1,24 +1,22 @@
 =begin rdoc
 
-Instant.rb - Contains instant messaging handles for Contact
+InfoItem.rb -- class to hold additional information items as needed
 
-# Time-stamp: <2013-07-17 21:35:26 tamara>
+# Time-stamp: <2013-07-18 00:28:03 tamara>
 # Copyright (C) 2013 by Tamara Temple Web Development
 # Author:     Tamara Temple <tamouse@gmail.com>
 # License:    MIT
 
 =end
 
-
-require 'active_record'
-
-class Instant < ActiveRecord::Base
-  belongs_to :contact
+class InfoItem < ActiveRecord::Base
+  belongs_to :resume
 
   include ActiveModel::Serialization
 
   def attributes
     attributes_no_ids(self)
   end
-  
+
 end
+

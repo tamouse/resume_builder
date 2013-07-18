@@ -1,8 +1,9 @@
 =begin rdoc
 
-Instant.rb - Contains instant messaging handles for Contact
+Course.rb - Class for additional courses and trainings taken
+independently of a school program
 
-# Time-stamp: <2013-07-17 21:35:26 tamara>
+# Time-stamp: <2013-07-17 21:53:46 tamara>
 # Copyright (C) 2013 by Tamara Temple Web Development
 # Author:     Tamara Temple <tamouse@gmail.com>
 # License:    MIT
@@ -12,8 +13,8 @@ Instant.rb - Contains instant messaging handles for Contact
 
 require 'active_record'
 
-class Instant < ActiveRecord::Base
-  belongs_to :contact
+class Course < ActiveRecord::Base
+  belongs_to :resume
 
   include ActiveModel::Serialization
 

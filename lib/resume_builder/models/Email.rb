@@ -1,3 +1,14 @@
+=begin rdoc
+
+Email.rb - Contains email addresses for Contact
+
+# Time-stamp: <2013-07-17 21:34:31 tamara>
+# Copyright (C) 2013 by Tamara Temple Web Development
+# Author:     Tamara Temple <tamouse@gmail.com>
+# License:    MIT
+
+=end
+
 require 'active_record'
 
 class Email < ActiveRecord::Base
@@ -6,11 +17,7 @@ class Email < ActiveRecord::Base
   include ActiveModel::Serialization
 
   def attributes
-    att={}
-    self.attribute_names.reject{|a| a =~ /id$/ }.each do |a|
-      att[a] = self[a] unless self[a].nil?
-    end
-    att
+    attributes_no_ids(self)
   end
 
 end

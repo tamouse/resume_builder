@@ -3,3 +3,4 @@
 bin/*
 !bin/resume_builder
 results.html
+tmp/
